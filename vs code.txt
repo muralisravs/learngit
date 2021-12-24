@@ -1,0 +1,14 @@
+provider "aws" {
+  region     = "us-west-2"
+  access_key = "AKIAWTNRSZEBYVUQH5YW"
+  secret_key = "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"
+}
+resource "aws_s3_bucket" "b" {
+  bucket = "9090-murali"
+  acl    = "private"
+
+  tags = {
+    Name        = "9090-murali"
+    Environment = "Dev"
+  }
+}
